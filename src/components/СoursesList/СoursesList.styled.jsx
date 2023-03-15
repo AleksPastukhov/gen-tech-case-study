@@ -1,7 +1,7 @@
 import styled from '@emotion/styled';
 import { NavLink } from 'react-router-dom';
 
-export const FilmTitle = styled.h2`
+export const CourseTitle = styled.h2`
   text-align: center;
   margin: 0;
   padding: 10px 5px;
@@ -35,7 +35,7 @@ export const Link = styled(NavLink)`
   text-decoration: none;
 `;
 
-export const FilmCard = styled.div`
+export const CourseCard = styled.div`
   width: 250px;
   height: 440px;
   background-color: ${p => p.theme.colors.backgroundColor};

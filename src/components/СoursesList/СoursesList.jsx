@@ -2,33 +2,28 @@ import { useLocation } from 'react-router-dom';
 import {
   HomeList,
   Link,
-  FilmCard,
-  FilmTitle,
+  CourseCard,
+  CourseTitle,
   Card,
 } from './СoursesList.styled';
-import img from '../images/depositphotos_12766135-stock-photo-3d-cinema-clapper-film-reel.jpg';
 
-export const СoursesList = ({ films }) => {
+export const СoursesList = ({ courses }) => {
   const location = useLocation();
 
   return (
     <HomeList>
-      {films.map(({ id, poster_path, name, title }) => (
+      {courses.map(({ id, title, previewImageLink }) => (
         <Card key={id}>
           <Link to={`/${id}`} state={{ from: location }}>
-            <FilmCard>
+            <CourseCard>
               <img
-                src={
-                  poster_path
-                    ? `https://image.tmdb.org/t/p/w500${poster_path}`
-                    : img
-                }
-                alt={`Poster ${title || name}`}
+                src={previewImageLink}
+                alt={`Poster ${title}`}
                 width="250px"
                 height="375px"
               />
-              <FilmTitle>{title || name}</FilmTitle>
-            </FilmCard>
+              <CourseTitle>{title}</CourseTitle>
+            </CourseCard>
           </Link>
         </Card>
       ))}

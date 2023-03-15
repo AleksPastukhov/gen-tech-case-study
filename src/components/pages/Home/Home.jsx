@@ -1,21 +1,21 @@
 import { useEffect, useState } from 'react';
-import { getTrendsMovie } from '../../services/coursesApi';
+import { getCourses } from '../../services/coursesApi';
 import { СoursesList } from '../../СoursesList/СoursesList';
 import { SectionTitle } from './Home.styled';
 
 const Home = () => {
-  const [trendingFilms, setTrendingFilms] = useState([]);
+  const [courses, setCourses] = useState([]);
 
   useEffect(() => {
-    getTrendsMovie()
-      .then(setTrendingFilms)
+    getCourses()
+      .then(setCourses)
       .catch(err => console.log(err));
   }, []);
 
   return (
     <>
-      <SectionTitle>Trending today</SectionTitle>
-      <СoursesList films={trendingFilms} />
+      <SectionTitle>Courses</SectionTitle>
+      <СoursesList courses={courses} />
     </>
   );
 };

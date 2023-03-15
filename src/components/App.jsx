@@ -2,15 +2,17 @@ import { Routes, Route } from 'react-router-dom';
 import { lazy } from 'react';
 import GlobalStyle from '../components/GlobalStyle';
 import { SharedLayout } from '../components/SharedLayout/SharedLayout';
-import { getTrendsCourses, getToken } from './services/coursesApi';
+import { getCourses, getCoursById } from './services/coursesApi';
 
 const Home = lazy(() => import('./pages/Home/Home'));
 const Lesson = lazy(() => import('./pages/Lesson/Lesson'));
 const NotFound = lazy(() => import('./pages/NotFound/NotFound'));
 
-getToken().then(console.log);
+getCourses()
+  .then(console.log)
+  .catch(error => console.log);
 
-getTrendsCourses()
+getCoursById()
   .then(console.log)
   .catch(error => console.log);
 
