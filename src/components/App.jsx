@@ -6,6 +6,7 @@ import { getCourses, getCoursById } from './services/coursesApi';
 
 const Home = lazy(() => import('./pages/Home/Home'));
 const Lesson = lazy(() => import('./pages/Lesson/Lesson'));
+const LessonsList = lazy(() => import('./pages/LessonsList/LessonsList'));
 const NotFound = lazy(() => import('./pages/NotFound/NotFound'));
 
 getCourses()
@@ -22,7 +23,8 @@ export const App = () => {
       <Routes>
         <Route path={'/'} element={<SharedLayout />}>
           <Route index element={<Home />} />
-          <Route path="/:id" element={<Lesson />}></Route>
+          <Route path="/:id" element={<LessonsList />} />
+          <Route path="/lesson:lessonId" element={<Lesson />} />
           <Route path="*" element={<NotFound />} />
         </Route>
       </Routes>

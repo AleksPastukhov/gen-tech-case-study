@@ -10,27 +10,28 @@ import {
   Description,
 } from './Lesson.styled';
 
-const Lesson = () => {
-  const { id } = useParams();
-  const [courseData, setCourseData] = useState(null);
+const Lesson = ({ courseData }) => {
+  console.log(courseData);
+  // const { lessonId } = useParams();
+  // const [courseData, setCourseData] = useState(null);
 
-  useEffect(() => {
-    getCoursById(id)
-      .then(setCourseData)
-      .catch(err => console.log(err));
-  }, [id]);
+  // useEffect(() => {
+  //   getCoursById(lessonId)
+  //     .then(setCourseData)
+  //     .catch(err => console.log(err));
+  // }, [lessonId]);
 
   if (!courseData) {
     return <h2>Loading...</h2>;
   }
 
-  const { title, previewImageLink } = courseData;
+  const { title } = courseData;
   return (
     <Wrapper>
       <Wrapper>
         <CourseInfo>
           <img
-            src={previewImageLink}
+            src={`https://wisey.app/assets/images/web/course-covers/lesson-1/cover.webp`}
             alt={`Poster ${title}`}
             width="300px"
             height="440px"

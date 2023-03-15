@@ -17,10 +17,10 @@ export const СoursesList = ({ courses }) => {
           <Link to={`/${id}`} state={{ from: location }}>
             <CourseCard>
               <img
-                src={previewImageLink}
+                src={`${previewImageLink}/cover.webp`}
                 alt={`Poster ${title}`}
-                width="250px"
-                height="375px"
+                width="500px"
+                height="250px"
               />
               <CourseTitle>{title}</CourseTitle>
             </CourseCard>
