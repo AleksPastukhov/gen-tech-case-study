@@ -10,35 +10,33 @@ import {
   Description,
 } from './Lesson.styled';
 
-const Lesson = ({ courseData }) => {
-  console.log(courseData);
-  // const { lessonId } = useParams();
-  // const [courseData, setCourseData] = useState(null);
+const Lesson = () => {
+  const { lessonId } = useParams();
+  const [courseData, setCourseData] = useState(null);
 
-  // useEffect(() => {
-  //   getCoursById(lessonId)
-  //     .then(setCourseData)
-  //     .catch(err => console.log(err));
-  // }, [lessonId]);
+  useEffect(() => {
+    getCoursById(lessonId)
+      .then(setCourseData)
+      .catch(err => console.log(err));
+  }, [lessonId]);
 
   if (!courseData) {
     return <h2>Loading...</h2>;
   }
 
-  const { title } = courseData;
   return (
     <Wrapper>
       <Wrapper>
         <CourseInfo>
           <img
             src={`https://wisey.app/assets/images/web/course-covers/lesson-1/cover.webp`}
-            alt={`Poster ${title}`}
+            alt={`Poster`}
             width="300px"
             height="440px"
           />
           <InfoBox>
             <div>
-              <CourseTitle> {title}</CourseTitle>
+              <CourseTitle> {}</CourseTitle>
               <Description>
                 User Score:
                 {'the movie is not popular'}
