@@ -1,10 +1,20 @@
 {
   "files": {
-    "main.js": "/gen-tech-case-study/static/js/main.f30294ab.js",
+    "main.css": "/gen-tech-case-study/static/css/main.c3d5249d.css",
+    "main.js": "/gen-tech-case-study/static/js/main.39417339.js",
+    "static/js/490.de619f18.chunk.js": "/gen-tech-case-study/static/js/490.de619f18.chunk.js",
+    "static/js/117.01189adb.chunk.js": "/gen-tech-case-study/static/js/117.01189adb.chunk.js",
+    "static/js/774.bea13381.chunk.js": "/gen-tech-case-study/static/js/774.bea13381.chunk.js",
+    "static/media/depositphotos_12766135-stock-photo-3d-cinema-clapper-film-reel.jpg": "/gen-tech-case-study/static/media/depositphotos_12766135-stock-photo-3d-cinema-clapper-film-reel.93fa7dfdeae2a9152326.jpg",
     "index.html": "/gen-tech-case-study/index.html",
-    "main.f30294ab.js.map": "/gen-tech-case-study/static/js/main.f30294ab.js.map"
+    "main.c3d5249d.css.map": "/gen-tech-case-study/static/css/main.c3d5249d.css.map",
+    "main.39417339.js.map": "/gen-tech-case-study/static/js/main.39417339.js.map",
+    "490.de619f18.chunk.js.map": "/gen-tech-case-study/static/js/490.de619f18.chunk.js.map",
+    "117.01189adb.chunk.js.map": "/gen-tech-case-study/static/js/117.01189adb.chunk.js.map",
+    "774.bea13381.chunk.js.map": "/gen-tech-case-study/static/js/774.bea13381.chunk.js.map"
   },
   "entrypoints": [
-    "static/js/main.f30294ab.js"
+    "static/css/main.c3d5249d.css",
+    "static/js/main.39417339.js"
   ]
 }

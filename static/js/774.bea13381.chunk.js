@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkgen_tech_case_study=self.webpackChunkgen_tech_case_study||[]).push([[774],{774:function(n,e,t){t.r(e),t.d(e,{default:function(){return i}});var c,s=t(168),r=t(225).Z.main(c||(c=(0,s.Z)(["\n  text-align: 'center';\n\n  b {\n    font-size: 64px;\n  }\n"]))),u=t(184),i=function(){return(0,u.jsxs)(r,{children:[(0,u.jsx)("b",{children:"404"}),(0,u.jsx)("p",{children:"Sorry, we couldn't find that page :("})]})}}}]);
+//# sourceMappingURL=774.bea13381.chunk.js.map
