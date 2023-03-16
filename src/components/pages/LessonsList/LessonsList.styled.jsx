@@ -37,6 +37,30 @@ export const Card = styled.li`
   }
 `;
 
+export const GoBack = styled(NavLink)`
+  margin-top: 10px;
+  width: 120px;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: calc(21 / 18);
+  color: ${p => p.theme.colors.primaryTextColor};
+  fill: ${p => p.theme.colors.primaryTextColor};
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+
+  &:hover,
+  &:focus,
+  &.active {
+    color: ${p => p.theme.colors.accentСolor};
+    border: 1px solid ${p => p.theme.colors.accentСolor};
+    fill: ${p => p.theme.colors.accentСolor};
+    transform: scale(1.04);
+  }
+`;
+
 export const Link = styled(NavLink)`
   color: ${p => p.theme.colors.primaryTextColor};
   text-decoration: none;

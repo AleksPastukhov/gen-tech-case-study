@@ -1,6 +1,7 @@
 import { useParams, Outlet, useLocation } from 'react-router-dom';
 import { useEffect, useState, Suspense } from 'react';
 import {
+  GoBack,
   LessonTitle,
   Wrapper,
   CourseInfo,
@@ -8,11 +9,13 @@ import {
   SubTitle,
   Description,
 } from './Lesson.styled';
+import { ReactComponent as Arrow } from '../../../images/arrow_back.svg';
 
 const Lesson = () => {
   const location = useLocation();
   const { lessonId } = useParams();
   const [lessonData, setLessonData] = useState(null);
+  const backLinkHref = location?.state?.from ?? '/';
 
   console.log(
     ...location.state.courseData.lessons.filter(
@@ -36,6 +39,9 @@ const Lesson = () => {
 
   return (
     <>
+      <GoBack type="button" to={backLinkHref}>
+        <Arrow /> GO BACK
+      </GoBack>
       <LessonTitle>{title}</LessonTitle>
       <Wrapper>
         <Wrapper>

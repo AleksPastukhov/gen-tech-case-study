@@ -1,9 +1,27 @@
 import { Suspense } from 'react';
-import { Outlet } from 'react-router-dom';
+import { Outlet, useLocation } from 'react-router-dom';
 
-import { NavItem, Wrapper, Nav, List } from './SharedLayout.styled';
+import {
+  NavItem,
+  Wrapper,
+  Nav,
+  List,
+  SectionTitle,
+} from './SharedLayout.styled';
 
 export const SharedLayout = () => {
+  const location = useLocation();
+
+  const getTitle = location => {
+    if (location.pathname.split('/').includes('course')) {
+      return 'Course';
+    } else if (location.pathname.split('/').includes('lesson')) {
+      return 'lesson';
+    } else {
+      return 'Courses';
+    }
+  };
+
   return (
     <Wrapper>
       <Nav>
@@ -12,6 +30,7 @@ export const SharedLayout = () => {
             <NavItem to="/">Courses</NavItem>
           </li>
         </List>
+        <SectionTitle>{getTitle(location)}</SectionTitle>
       </Nav>
       <Suspense fallback={<h2>Loading...</h2>}>
         <Outlet />

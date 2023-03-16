@@ -8,13 +8,16 @@ import {
   CourseTitle,
   LessonTitle,
   Card,
+  GoBack,
 } from './LessonsList.styled';
 import defaultImg from '../../../images/no-poster.jpeg';
+import { ReactComponent as Arrow } from '../../../images/arrow_back.svg';
 
 const LessonsList = () => {
   const location = useLocation();
   const { id } = useParams();
   const [courseData, setCourseData] = useState(null);
+  const backLinkHref = location?.state?.from ?? '/';
 
   useEffect(() => {
     getCoursById(id)
@@ -28,7 +31,10 @@ const LessonsList = () => {
 
   return (
     <>
-      <CourseTitle>{courseData.title}</CourseTitle>
+      <GoBack type="button" to={backLinkHref}>
+        <Arrow /> GO BACK
+      </GoBack>
+      <CourseTitle>Course {courseData.title}</CourseTitle>
       <HomeList>
         {courseData.lessons.map(({ id, title, previewImageLink, status }) => (
           <Card key={id}>

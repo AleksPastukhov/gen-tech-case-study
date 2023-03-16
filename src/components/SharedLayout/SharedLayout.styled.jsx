@@ -1,7 +1,16 @@
 import { NavLink } from 'react-router-dom';
 import styled from '@emotion/styled';
 
+export const SectionTitle = styled.h1`
+  text-align: center;
+  margin: 0;
+  font-size: 32px;
+`;
+
 export const NavItem = styled(NavLink)`
+  position: absolute;
+  left: 20px;
+  top: 23px;
   padding: 4px;
   color: ${p => p.theme.colors.primaryTextColor};
   font-size: 20px;
@@ -18,6 +27,12 @@ export const NavItem = styled(NavLink)`
 `;
 
 export const Nav = styled.nav`
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+  width: 100%;
   font-size: 16px;
   box-shadow: ${p => p.theme.boxShadow};
   padding: 20px 20px;
@@ -33,5 +48,7 @@ export const List = styled.ul`
 `;
 
 export const Wrapper = styled.div`
+  width: 1200px;
+  margin: 0 auto;
   color: ${p => p.theme.colors.primaryTextColor};
 `;
