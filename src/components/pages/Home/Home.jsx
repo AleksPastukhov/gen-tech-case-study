@@ -12,6 +12,10 @@ const Home = () => {
       .catch(err => console.log(err));
   }, []);
 
+  if (courses.length === 0) {
+    return <h2>Loading...</h2>;
+  }
+
   return (
     <>
       <SectionTitle>Courses</SectionTitle>

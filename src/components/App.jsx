@@ -23,8 +23,8 @@ export const App = () => {
       <Routes>
         <Route path={'/'} element={<SharedLayout />}>
           <Route index element={<Home />} />
-          <Route path="/:id" element={<LessonsList />} />
-          <Route path="/lesson:lessonId" element={<Lesson />} />
+          <Route path="course/:id" element={<LessonsList />} />
+          <Route path="lesson/:lessonId" element={<Lesson />} />
           <Route path="*" element={<NotFound />} />
         </Route>
       </Routes>

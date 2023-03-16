@@ -8,9 +8,11 @@ export const Wrapper = styled.div`
   box-shadow: ${p => p.theme.boxShadow};
 `;
 
-export const CourseTitle = styled.h1`
+export const LessonTitle = styled.h1`
   text-align: center;
-  margin-bottom: 20px;
+  margin: 0;
+  padding: 20px 5px;
+  font-size: 32px;
 `;
 
 export const SubTitle = styled.h2`

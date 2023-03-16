@@ -6,8 +6,10 @@ import {
   Link,
   CourseCard,
   CourseTitle,
+  LessonTitle,
   Card,
 } from './LessonsList.styled';
+import defaultImg from '../../../images/no-poster.jpeg';
 
 const LessonsList = () => {
   const location = useLocation();
@@ -25,23 +27,31 @@ const LessonsList = () => {
   }
 
   return (
-    <HomeList>
-      {courseData.lessons.map(({ id, title, previewImageLink }) => (
-        <Card key={id}>
-          <Link to={`/lesson/${id}`} state={{ from: location, courseData }}>
-            <CourseCard>
-              <img
-                src={`${previewImageLink}/cover.webp`}
-                alt={`Poster ${title}`}
-                width="500px"
-                height="250px"
-              />
-              <CourseTitle>{title}</CourseTitle>
-            </CourseCard>
-          </Link>
-        </Card>
-      ))}
-    </HomeList>
+    <>
+      <CourseTitle>{courseData.title}</CourseTitle>
+      <HomeList>
+        {courseData.lessons.map(({ id, title, previewImageLink, status }) => (
+          <Card key={id}>
+            <Link to={`/lesson/${id}`} state={{ from: location, courseData }}>
+              <CourseCard>
+                <LessonTitle>{title}</LessonTitle>
+                <p>{status}</p>
+                <img
+                  src={
+                    previewImageLink
+                      ? `https://wisey.app/videos/lack-of-motivation-how-to-overcome-it/lesson-1/AppleHLS1/lesson-1.webp`
+                      : defaultImg
+                  }
+                  alt={`Poster ${title}`}
+                  width="500px"
+                  height="250px"
+                />
+              </CourseCard>
+            </Link>
+          </Card>
+        ))}
+      </HomeList>
+    </>
   );
 };
 

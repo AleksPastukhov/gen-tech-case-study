@@ -11,7 +11,7 @@ export const CourseTitle = styled.h2`
 export const HomeList = styled.ul`
   display: flex;
   flex-wrap: wrap;
-  align-items: center;
+  align-items: stretch;
   justify-content: center;
   gap: 20px;
   margin: 0;
@@ -37,11 +37,14 @@ export const Link = styled(NavLink)`
 
 export const CourseCard = styled.div`
   width: 500px;
-  height: 315px;
   background-color: ${p => p.theme.colors.backgroundColor};
 
   img {
     width: 500px;
     height: 250px;
   }
+`;
+
+export const DescriptionBox = styled.div`
+  padding: 10px;
 `;

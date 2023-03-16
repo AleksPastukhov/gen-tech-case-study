@@ -1,7 +1,14 @@
 import styled from '@emotion/styled';
 import { NavLink } from 'react-router-dom';
 
-export const CourseTitle = styled.h2`
+export const CourseTitle = styled.h1`
+  text-align: center;
+  margin: 0;
+  padding: 20px 5px;
+  font-size: 32px;
+`;
+
+export const LessonTitle = styled.h2`
   text-align: center;
   margin: 0;
   padding: 10px 5px;
