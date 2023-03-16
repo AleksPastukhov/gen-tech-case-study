@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import { getCourses } from '../../services/coursesApi';
 import { СoursesList } from '../../СoursesList/СoursesList';
-import { Container } from './Home.styled';
+import { Container, Title } from './Home.styled';
 
 const Home = () => {
   const [courses, setCourses] = useState([]);
@@ -18,6 +18,7 @@ const Home = () => {
 
   return (
     <Container>
+      <Title>Trend courses</Title>
       <СoursesList courses={courses} />
     </Container>
   );

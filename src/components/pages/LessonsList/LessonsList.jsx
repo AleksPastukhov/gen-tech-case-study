@@ -34,7 +34,7 @@ const LessonsList = () => {
       <GoBack type="button" to={backLinkHref}>
         <Arrow /> GO BACK
       </GoBack>
-      <CourseTitle>Course {courseData.title}</CourseTitle>
+      <CourseTitle>{courseData.title}</CourseTitle>
       <HomeList>
         {courseData.lessons.map(({ id, title, previewImageLink, status }) => (
           <Card key={id}>

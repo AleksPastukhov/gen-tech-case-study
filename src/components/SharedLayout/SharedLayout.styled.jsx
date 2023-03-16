@@ -48,6 +48,7 @@ export const List = styled.ul`
 `;
 
 export const Wrapper = styled.div`
+  position: relative;
   width: 1200px;
   margin: 0 auto;
   color: ${p => p.theme.colors.primaryTextColor};

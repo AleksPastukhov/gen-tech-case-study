@@ -38,6 +38,9 @@ export const Card = styled.li`
 `;
 
 export const GoBack = styled(NavLink)`
+  position: absolute;
+  top: 115px;
+  left: 20px;
   margin-top: 10px;
   width: 120px;
   font-weight: 700;
