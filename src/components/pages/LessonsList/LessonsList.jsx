@@ -38,7 +38,7 @@ const LessonsList = () => {
       <HomeList>
         {courseData.lessons.map(({ id, title, previewImageLink, status }) => (
           <Card key={id}>
-            <Link to={`/lesson/${id}`} state={{ from: location, courseData }}>
+            <Link to={`/lesson/${id}`} state={{ from: location }}>
               <CourseCard>
                 <LessonTitle>{title}</LessonTitle>
                 <p>{status}</p>

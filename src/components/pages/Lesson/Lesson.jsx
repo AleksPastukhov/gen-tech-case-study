@@ -1,5 +1,6 @@
 import { useParams, Outlet, useLocation } from 'react-router-dom';
 import { useEffect, useState, Suspense } from 'react';
+import { getCoursById } from '../../services/coursesApi';
 import {
   GoBack,
   LessonTitle,
@@ -17,19 +18,18 @@ const Lesson = () => {
   const [lessonData, setLessonData] = useState(null);
   const backLinkHref = location?.state?.from ?? '/';
 
-  console.log(
-    ...location.state.courseData.lessons.filter(
-      lesson => lesson.id === lessonId
-    )
-  );
+  const id = location.state.from.pathname.split('/')[2];
 
   useEffect(() => {
-    setLessonData(
-      ...location.state.courseData.lessons.filter(
-        lesson => lesson.id === lessonId
-      )
-    );
-  }, [lessonId, location]);
+    getCoursById(id)
+      .then(data => {
+        const lessonInfo = data.lessons.filter(
+          lesson => lesson.id === lessonId
+        );
+        setLessonData(...lessonInfo);
+      })
+      .catch(err => console.log(err));
+  }, [id, lessonId]);
 
   if (!lessonData) {
     return <h2>Loading...</h2>;
