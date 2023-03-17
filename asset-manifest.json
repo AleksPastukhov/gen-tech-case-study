@@ -1,23 +1,23 @@
 {
   "files": {
     "main.css": "/gen-tech-case-study/static/css/main.c3d5249d.css",
-    "main.js": "/gen-tech-case-study/static/js/main.3a6bccb9.js",
+    "main.js": "/gen-tech-case-study/static/js/main.4623b9ff.js",
     "static/js/490.157f19cd.chunk.js": "/gen-tech-case-study/static/js/490.157f19cd.chunk.js",
-    "static/js/117.a77f9e72.chunk.js": "/gen-tech-case-study/static/js/117.a77f9e72.chunk.js",
+    "static/js/117.a93db576.chunk.js": "/gen-tech-case-study/static/js/117.a93db576.chunk.js",
     "static/js/921.806cf717.chunk.js": "/gen-tech-case-study/static/js/921.806cf717.chunk.js",
     "static/js/774.bea13381.chunk.js": "/gen-tech-case-study/static/js/774.bea13381.chunk.js",
     "static/media/no-poster.jpeg": "/gen-tech-case-study/static/media/no-poster.161fcce85c949fe3d7ee.jpeg",
     "index.html": "/gen-tech-case-study/index.html",
     "static/media/arrow_back.svg": "/gen-tech-case-study/static/media/arrow_back.8e15a0513916b80f3bf86ef943ee4b17.svg",
     "main.c3d5249d.css.map": "/gen-tech-case-study/static/css/main.c3d5249d.css.map",
-    "main.3a6bccb9.js.map": "/gen-tech-case-study/static/js/main.3a6bccb9.js.map",
+    "main.4623b9ff.js.map": "/gen-tech-case-study/static/js/main.4623b9ff.js.map",
     "490.157f19cd.chunk.js.map": "/gen-tech-case-study/static/js/490.157f19cd.chunk.js.map",
-    "117.a77f9e72.chunk.js.map": "/gen-tech-case-study/static/js/117.a77f9e72.chunk.js.map",
+    "117.a93db576.chunk.js.map": "/gen-tech-case-study/static/js/117.a93db576.chunk.js.map",
     "921.806cf717.chunk.js.map": "/gen-tech-case-study/static/js/921.806cf717.chunk.js.map",
     "774.bea13381.chunk.js.map": "/gen-tech-case-study/static/js/774.bea13381.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.c3d5249d.css",
-    "static/js/main.3a6bccb9.js"
+    "static/js/main.4623b9ff.js"
   ]
 }
