@@ -3,7 +3,7 @@ import { NavLink } from 'react-router-dom';
 
 export const Wrapper = styled.div`
   position: relative;
-  width: 95%;
+  width: 100%;
   margin: 20px auto;
   padding: 10px;
   box-shadow: ${p => p.theme.boxShadow};

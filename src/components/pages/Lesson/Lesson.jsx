@@ -1,5 +1,5 @@
-import { useParams, Outlet, useLocation } from 'react-router-dom';
-import { useEffect, useState, Suspense } from 'react';
+import { useParams, useLocation } from 'react-router-dom';
+import { useEffect, useState } from 'react';
 import { getCoursById } from '../../services/coursesApi';
 import {
   GoBack,
@@ -44,36 +44,26 @@ const Lesson = () => {
       </GoBack>
       <LessonTitle>{title}</LessonTitle>
       <Wrapper>
-        <Wrapper>
-          <CourseInfo>
-            <img
-              src={`${previewImageLink}.wedp`}
-              alt={`Poster`}
-              width="300px"
-              height="440px"
-            />
-            <InfoBox>
-              <div>
-                <Description>
-                  User Score:
-                  {'the movie is not popular'}
-                </Description>
-                <SubTitle>Overview</SubTitle>
-                <Description>{}</Description>
-                <SubTitle>Geners</SubTitle>
-                <Description>{'no genre'}</Description>
-              </div>
-            </InfoBox>
-          </CourseInfo>
-        </Wrapper>
-        <Wrapper>
-          <SubTitle>Additional information</SubTitle>
-        </Wrapper>
-        <Wrapper>
-          <Suspense fallback={<h1>Loading...</h1>}>
-            <Outlet />
-          </Suspense>
-        </Wrapper>
+        <CourseInfo>
+          <img
+            src={`${previewImageLink}.wedp`}
+            alt={`Poster`}
+            width="300px"
+            height="440px"
+          />
+          <InfoBox>
+            <div>
+              <Description>
+                User Score:
+                {'the movie is not popular'}
+              </Description>
+              <SubTitle>Overview</SubTitle>
+              <Description>{}</Description>
+              <SubTitle>Geners</SubTitle>
+              <Description>{'no genre'}</Description>
+            </div>
+          </InfoBox>
+        </CourseInfo>
       </Wrapper>
     </>
   );
